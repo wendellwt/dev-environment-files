@@ -88,28 +88,28 @@ return {
       on_attach = on_attach,
     })
 
-    -- configure tailwindcss server
-    lspconfig["tailwindcss"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-    })
+--wt    -- configure tailwindcss server
+--wt    lspconfig["tailwindcss"].setup({
+--wt      capabilities = capabilities,
+--wt      on_attach = on_attach,
+--wt    })
 
-    -- configure svelte server
-    lspconfig["svelte"].setup({
-      capabilities = capabilities,
-      on_attach = function(client, bufnr)
-        on_attach(client, bufnr)
-
-        vim.api.nvim_create_autocmd("BufWritePost", {
-          pattern = { "*.js", "*.ts" },
-          callback = function(ctx)
-            if client.name == "svelte" then
-              client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.file })
-            end
-          end,
-        })
-      end,
-    })
+--wt    -- configure svelte server
+--wt    lspconfig["svelte"].setup({
+--wt      capabilities = capabilities,
+--wt      on_attach = function(client, bufnr)
+--wt        on_attach(client, bufnr)
+--wt
+--wt        vim.api.nvim_create_autocmd("BufWritePost", {
+--wt          pattern = { "*.js", "*.ts" },
+--wt          callback = function(ctx)
+--wt            if client.name == "svelte" then
+--wt              client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.file })
+--wt            end
+--wt          end,
+--wt        })
+--wt      end,
+--wt    })
 
     -- configure prisma orm server
     lspconfig["prismals"].setup({
@@ -117,19 +117,19 @@ return {
       on_attach = on_attach,
     })
 
-    -- configure graphql language server
-    lspconfig["graphql"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-      filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
-    })
+--wt    -- configure graphql language server
+--wt    lspconfig["graphql"].setup({
+--wt      capabilities = capabilities,
+--wt      on_attach = on_attach,
+--wt      filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
+--wt    })
 
     -- configure emmet language server
-    lspconfig["emmet_ls"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-      filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
-    })
+--wt    lspconfig["emmet_ls"].setup({
+--wt      capabilities = capabilities,
+--wt      on_attach = on_attach,
+--wt      filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
+--wt    })
 
     -- configure python server
     lspconfig["pyright"].setup({
