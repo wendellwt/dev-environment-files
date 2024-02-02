@@ -38,17 +38,20 @@ make sure all associated/support tools are
 installed and in your PATH:
 
 ```
-   gcc   --version   # (Red Hat 8.3.1-3)
-   cmake --version   # (cmake version 3.22.2)
+   gcc   --version    # Red Hat 8.3.1-3
+   cmake --version    # cmake version 3.22.2
 
-   nvim  --version   # (NVIM v0.10.0-dev-2255+g4c9119461)
-   git   --version   # (2.29)
-   cargo --version   # (cargo 1.74.1)
-   node  --version   # (Node version must be >= 14)
-   npm   --version   # (npm version must be >= 7)
+   nvim  --version    # NVIM v0.10.0-dev-2255+g4c9119461
+   git   --version    # 2.29
+   cargo --version    # cargo 1.74.1
+   node  --version    # Node version must be >= 14
+   npm   --version    # npm version must be >= 7
 
-   rg    --version   # (ripgrep 13.0.0)
-   fd    --version   # (fd 8.6.0)
+   rg    --version    # ripgrep 13.0.0
+   fd    --version    # fd 8.6.0
+
+   pylint  --version  # pylint 2.12.2
+   pyright --version  # pyright 1.1.347
 ```
 
 These may require:
@@ -129,7 +132,7 @@ these are apparently needed also:
 
 ```
     npm install -g neovim
-    pip3 install pyright
+    pip3 install pylint pyright
 ```
 
 ## Starting NeoVIM
