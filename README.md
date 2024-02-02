@@ -86,8 +86,7 @@ Cargo
 
     To configure your current shell, run:
     source "$HOME/.cargo/env"
-~~~
-
+```
 ripgrep
 
 from: [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)
