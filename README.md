@@ -157,10 +157,10 @@ these are apparently needed also:
 if you already had nvim running (or attempted), move all of those configurations aside:
 
 ```
-    cd ~/.config       ; mv nvim nvim_feb1
-    cd ~/.local/share  ; mv nvim nvim_feb1
-    cd ~/.local/state  ; mv nvim nvim_feb1
-    cd ~/.cache        ; mv nvim nvim_feb1
+    cd ~/.config       ; mv nvim nvim_feb2
+    cd ~/.local/share  ; mv nvim nvim_feb2
+    cd ~/.local/state  ; mv nvim nvim_feb2
+    cd ~/.cache        ; mv nvim nvim_feb2
 ```
 
 ## Install config
