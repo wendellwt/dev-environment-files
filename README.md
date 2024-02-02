@@ -43,10 +43,10 @@ installed and in your PATH:
 
    nvim  --version    # NVIM v0.10.0-dev-2255+g4c9119461
    git   --version    # 2.29
-   cargo --version    # cargo 1.74.1
    node  --version    # Node version must be >= 14
    npm   --version    # npm version must be >= 7
 
+   cargo --version    # cargo 1.74.1
    rg    --version    # ripgrep 13.0.0
    fd    --version    # fd 8.6.0
 
@@ -67,14 +67,18 @@ versions of those tools are installed.
 ### Install workable versions of node, npm, etc.
 
 **node, npm**:
+
 ```
     wget https://nodejs.org/dist/v16.20.2/node-v16.20.2-linux-x64.tar.gz
     tar zxvf node-v16.20.2-linux-x64.tar.gz
 ```
+
 These may require:
+
 ```
     export PATH=$HOME/pkgs/node-v16.20.2-linux-x64/bin:$PATH
 ```
+
 **cargo**:
 
 ```
@@ -99,6 +103,7 @@ These may require:
     To configure your current shell, run:
     source "$HOME/.cargo/env"
 ```
+
 **ripgrep**:
 
 from: [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)
@@ -109,7 +114,9 @@ from: [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)
     cargo build --release
     cp target/release/rg ~/local/bin
 ```
+
 and then:
+
 ```
     rg --version
     ripgrep 14.1.0 (rev 9b42af96f0)
@@ -117,12 +124,22 @@ and then:
 
 **fd (find files)**:
 
-from: [sharkdb/fd](https://github.com/sharkdp/fd)
+from: [sharkdb/fd](https://github.com/sharkdp/fd) (do _not_ install the yum verion)
 
 ```
     cargo install fd-find
 ```
+
+or possibly:
+
+```
+    cd ~/pkgs/fd
+    mkdir tmp
+    CARGO_TARGET_DIR=~/pkgs/fd/tmp cargo install fd-find
+```
+
 and then:
+
 ```
     fd --version
     fd 9.0.0
@@ -132,7 +149,7 @@ these are apparently needed also:
 
 ```
     npm install -g neovim
-    pip3 install pylint pyright
+    pip3 install neovim pylint pyright
 ```
 
 ## Starting NeoVIM
@@ -158,12 +175,13 @@ i.e., it uses the LazyVim plugin manager.
 I started with that config, and then
 made some of my own changes to it:
 
-* I use other languages, so these LSPs were added:
-  -  VueJS, bash, awk, json
-* I don't want source code automatically reformatted, so:
-  -  black, flake8, isort were explicitly commented out (in several places)
+- I use other languages, so these LSPs were added:
+  - VueJS, bash, awk, json
+- I don't want source code automatically reformatted, so:
+  - black, flake8, isort were explicitly commented out (in several places)
 
 Now, do something like this:
+
 ```
     cd lazyvim/
     git clone git@github.com:wendellwt/dev-environment-files.git
@@ -178,6 +196,7 @@ If it all seems in place, start nvim and watch it install everything:
 
     :checkhealth
 ```
+
 Yipee!!!, right?
 
 ## NerdFont on windows
@@ -194,11 +213,14 @@ which says to:
   cd fira/
   wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.1/FiraCode.zip  unzip FiraCode.zip
 ```
+
 and then, in File Explorer:
+
 ```
     highlight all .ttf files
       -> Install
 ```
+
 then, in PuTTY:
 
 ```
@@ -206,11 +228,13 @@ then, in PuTTY:
   -> Appearance
     FiraCode Nerd Font Mono
 ```
+
 However, take a look at these, they may be better:
-* [Martian](https://www.programmingfonts.org/#martian-mono)
-* [Meslo](https://www.programmingfonts.org/#meslo)
-* [SauceCodePro](https://www.programmingfonts.org/#source-code-pro)
-* [MonaSpace](https://www.programmingfonts.org/#monaspace-neon)
+
+- [Martian](https://www.programmingfonts.org/#martian-mono)
+- [Meslo](https://www.programmingfonts.org/#meslo)
+- [SauceCodePro](https://www.programmingfonts.org/#source-code-pro)
+- [MonaSpace](https://www.programmingfonts.org/#monaspace-neon)
 
 ## Keymaps used in the above configuration
 
