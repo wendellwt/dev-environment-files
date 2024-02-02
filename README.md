@@ -63,16 +63,16 @@ versions of those tools are installed.
 
 ## Install workable versions of Node, npm, etc.
 
-**Node, npm**:
+**node, npm**:
 ```
     wget https://nodejs.org/dist/v16.20.2/node-v16.20.2-linux-x64.tar.gz
     tar zxvf node-v16.20.2-linux-x64.tar.gz
 ```
 These may require:
 ```
-    export PATH=/home/wturner/pkgs/node-v16.20.2-linux-x64/bin:$PATH
+    export PATH=$HOME/pkgs/node-v16.20.2-linux-x64/bin:$PATH
 ```
-**Cargo**:
+**cargo**:
 
 ```
     curl https://sh.rustup.rs -sSf | sh
@@ -112,7 +112,7 @@ and then:
     ripgrep 14.1.0 (rev 9b42af96f0)
 ```
 
-**find files (fd)**:
+**fd (find files)**:
 
 from: [sharkdb/fd](https://github.com/sharkdp/fd)
 
@@ -130,7 +130,6 @@ these are apparently needed also:
 ```
     npm install -g neovim
     pip3 install pyright
-    Successfully installed pyright-1.1.349
 ```
 
 ## Starting NeoVIM
