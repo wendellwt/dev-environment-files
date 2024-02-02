@@ -167,7 +167,7 @@ Now, do something like this:
 ```
     cd lazyvim/
     git clone git@github.com:wendellwt/dev-environment-files.git
-    cd dev-environment-files
+    cd dev-environment-files/.config
     cp -R nvim ~/.config/
 ```
 
