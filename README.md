@@ -146,10 +146,9 @@ Note that this config is based on LazyVim.
 However, I made some of my own changes to his profile:
 
 * I don't want source code automatically reformatted, so:
-** black, flake8, isort were explicitly commented out (in several places)
+  -  black, flake8, isort were explicitly commented out (in several places)
 * I use other languages, so these LSPs were added:
-** Vue, bash, awk, json
-
+  -  Vue, bash, awk, json
 
 ```
     cd lazyvim/
@@ -165,159 +164,96 @@ If it all seems in place, start nvim and watch it install everything:
     :checkhealth
 ```
 
-NerdFont on windows
+## NerdFont on windows
 
 refs:
 Beautify your Windows Terminal using Nerd Fonts and Oh-My-Posh
 
 which says to:
 
+```
   mkdir fira
-
   cd fira/
-
   wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.1/FiraCode.zip  unzip FiraCode.zip
-
+```
 and then, in File Explorer:
-
+```
     highlight all .ttf files
-
       -> Install
-
+```
 then, in PuTTY:
 
+```
   -> Load
-
   -> Appearance
-
     FiraCode Nerd Font Mono
+```
 
-Keymaps to the above configuration
+# Keymaps to the above configuration
 
 <> is <leader>, which is set to a space
 
+```
 formatting
-
  <>mp function()
 
-
-
 telescope
-
   <>ff <cmd>Telescope find_files  Fuzzy find files in cwd
-
   <>fr <cmd>Telescope oldfiles    Fuzzy find recent files
-
   <>fs <cmd>Telescope live_grep   Find string in cwd
-
   <>fc <cmd>Telescope grep_string Find string under cursor in cwd
 
-
-
 nvim-treesitter
-
   ; ts_repeat_move.repeat_last_move
-
   , ts_repeat_move.repeat_last_move_opposite
-
   f ts_repeat_move.builtin_f
-
   F ts_repeat_move.builtin_F
-
   t ts_repeat_move.builtin_t
-
   T ts_repeat_move.builtin_T
 
-
-
 linting
-
   vim.<>l function()
 
-
-
 nvim-tree:
-
   <>ee NvimTreeToggle         Toggle file explorer
-
   <>ef NvimTreeFindFileToggle Toggle file explorer on current file
-
   <>ec NvimTreeCollapse       Collapse file explorer
-
   <>er NvimTreeRefresh        Refresh file explorer
 
-
-
 lsp/lspconfig
-
   gR <cmd>Telescope lsp_references       -- show definition, references
-
   gD vim.lsp.buf.declaration             -- go to declaration
-
   gd <cmd>Telescope lsp_definitions      -- show lsp definitions
-
   gi <cmd>Telescope lsp_implementations  -- show lsp implementations
-
   gt <cmd>Telescope lsp_type_definitions -- show lsp type definitions
-
   <>ca vim.lsp.buf.code_action           -- see available code actions, in visual mode will apply to selection
-
   <>rn vim.lsp.buf.rename                -- smart rename
-
   <>D <cmd>Telescope diagnostics bufnr=0 -- show  diagnostics for file
-
   <>d vim.diagnostic.open_float          -- show diagnostics for line
-
   [d vim.diagnostic.goto_prev            -- jump to previous diagnostic in buffer
-
   ]d vim.diagnostic.goto_next            -- jump to next diagnostic in buffer
-
   K vim.lsp.buf.hover                    -- show documentation for what is under cursor
-
   <>rs :LspRestart                       -- mapping to restart lsp if necessary
 
-
-
 harpoon
-
   <>hn <cmd>lua require('harpoon.ui').nav_next() Go to next harpoon mark
 
-
-
 auto-session
-
   <>wr <cmd>SessionRestore  Restore session for cwd
-
   <>ws <cmd>SessionSave     Save session for auto session root dir
 
-
-
 keymaps
-
   jk <ESC> Exit insert mode with jk
-
   <>nh :nohl Clear search highlights
-
   <>+ <C-a> Increment number                        -- increment
-
   <>- <C-x> Decrement number                        -- decrement
-
   <>sv <C-w>v Split window vertically               -- split window vertically
-
   <>sh <C-w>s Split window horizontally             -- split window horizontally
-
   <>se <C-w>= Make splits equal size                -- make split windows equal width & height
-
   <>sx <cmd>close Close current split               -- close current split window
-
   <>to <cmd>tabnew Open new tab                     -- open new tab
-
   <>tx <cmd>tabclose Close current tab              -- close current tab
-
   <>tn <cmd>tabn Go to next tab                     --  go to next tab
-
   <>tp <cmd>tabp Go to previous tab                 --  go to previous tab
-
   <>tf <cmd>tabnew % Open current buffer in new tab --  move current buffer to new tab
-
-
+```
