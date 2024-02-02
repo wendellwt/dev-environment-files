@@ -189,7 +189,7 @@ then, in PuTTY:
     FiraCode Nerd Font Mono
 ```
 
-# Keymaps to the above configuration
+## Keymaps to the above configuration
 
 <> is <leader>, which is set to a space
 
