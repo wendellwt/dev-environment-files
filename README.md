@@ -138,19 +138,21 @@ these are apparently needed also:
 if you already had nvim running (or attempted), move all of those configurations aside:
 
 ```
- cd ~/.config       ; mv nvim nvim_feb1
- cd ~/.local/share  ; mv nvim nvim_feb1
- cd ~/.local/state  ; mv nvim nvim_feb1
- cd ~/.cache        ; mv nvim nvim_feb1
- ```
+    cd ~/.config       ; mv nvim nvim_feb1
+    cd ~/.local/share  ; mv nvim nvim_feb1
+    cd ~/.local/state  ; mv nvim nvim_feb1
+    cd ~/.cache        ; mv nvim nvim_feb1
+```
 
 ## Install config
 
-After viewing his videos listed in his
-My Dev Environment Files page,
-I finally worked out a set of config files that actually work!
+After viewing Josean's videos listed in his
+[My Dev Environment Files](https://github.com/josean-dev/dev-environment-files)
+page, I finally worked out a set of config files that actually work!
 
-Note that this config is based on LazyVim.
+Note that this config is based on
+[LazyVim](https://www.lazyvim.org/),
+i.e., it uses the LazyVim plugin manager
 
 However, I made some of my own changes to his profile:
 
@@ -159,9 +161,11 @@ However, I made some of my own changes to his profile:
 * I use other languages, so these LSPs were added:
   -  Vue, bash, awk, json
 
+Do something like this:
 ```
     cd lazyvim/
-    tar zxvf wt_josean_nvim_config.tgz
+    git clone git@github.com:wendellwt/dev-environment-files.git
+    ce dev-environment-files
     cp -R nvim ~/.config/
 ```
 
@@ -176,7 +180,9 @@ If it all seems in place, start nvim and watch it install everything:
 ## NerdFont on windows
 
 refs:
-Beautify your Windows Terminal using Nerd Fonts and Oh-My-Posh
+Beautify your Windows Terminal using
+[Nerd Fonts](https://www.nerdfonts.com/font-downloads)
+and Oh-My-Posh
 
 which says to:
 
@@ -197,6 +203,10 @@ then, in PuTTY:
   -> Appearance
     FiraCode Nerd Font Mono
 ```
+However, take a look at these, they may be better:
+* [Meslo](https://www.programmingfonts.org/#meslo)
+* [SauceCodePro](https://www.programmingfonts.org/#source-code-pro)
+* [MonaSpace](https://www.programmingfonts.org/#monaspace-neon)
 
 ## Keymaps to the above configuration
 
