@@ -1,4 +1,14 @@
-# My own version of his Dev Environment Files
+# My own version of Dev Environment Files
+
+This is my own version of
+[Josean's](https://github.com/josean-dev)
+very excellent
+[LazyVim](https://www.lazyvim.org/)
+configuration.
+
+He has many excellent
+[videos](https://www.youtube.com/watch?v=NL8D8EkphUw)
+that explain what these are and how they work.
 
 ## Build NeoVIM
 
@@ -9,9 +19,8 @@ Use decent gcc and cmake:
     cmake-3.28.1
 ```
 
-Compile NeoVIM from sources
-
-based on the guidelines from here: https://github.com/neovim/neovim/blob/master/INSTALL.md#install-from-source
+Compile NeoVIM from sources, using the guidelines from here:
+https://github.com/neovim/neovim/blob/master/INSTALL.md#install-from-source
 
 ```
     git clone https://github.com/neovim/neovim
@@ -52,9 +61,9 @@ These may require:
 The rest of this section describes the misc procedures used to ensure that recent
 versions of those tools are installed.
 
-## Install workable versions of Node, npm
+## Install workable versions of Node, npm, etc.
 
-Node, npm:
+**Node, npm**:
 ```
     wget https://nodejs.org/dist/v16.20.2/node-v16.20.2-linux-x64.tar.gz
     tar zxvf node-v16.20.2-linux-x64.tar.gz
@@ -63,7 +72,7 @@ These may require:
 ```
     export PATH=/home/wturner/pkgs/node-v16.20.2-linux-x64/bin:$PATH
 ```
-Cargo
+**Cargo**:
 
 ```
     curl https://sh.rustup.rs -sSf | sh
@@ -87,7 +96,7 @@ Cargo
     To configure your current shell, run:
     source "$HOME/.cargo/env"
 ```
-ripgrep
+**ripgrep**:
 
 from: [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)
 
@@ -103,7 +112,7 @@ and then:
     ripgrep 14.1.0 (rev 9b42af96f0)
 ```
 
-find files (fd)
+**find files (fd)**:
 
 from: [sharkdb/fd](https://github.com/sharkdp/fd)
 
