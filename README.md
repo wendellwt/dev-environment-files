@@ -19,8 +19,8 @@ Use decent gcc and cmake:
     cmake-3.28.1
 ```
 
-Compile NeoVIM from sources, using the guidelines from here:
-https://github.com/neovim/neovim/blob/master/INSTALL.md#install-from-source
+Compile NeoVIM from sources, using the guidelines from
+[here](https://github.com/neovim/neovim/blob/master/INSTALL.md#install-from-source).
 
 ```
     git clone https://github.com/neovim/neovim
@@ -61,7 +61,7 @@ These may require:
 The rest of this section describes the misc procedures used to ensure that recent
 versions of those tools are installed.
 
-## Install workable versions of Node, npm, etc.
+### Install workable versions of node, npm, etc.
 
 **node, npm**:
 ```
@@ -148,23 +148,23 @@ if you already had nvim running (or attempted), move all of those configurations
 After viewing Josean's videos listed in his
 [My Dev Environment Files](https://github.com/josean-dev/dev-environment-files)
 page, I finally worked out a set of config files that actually work!
-
 Note that this config is based on
 [LazyVim](https://www.lazyvim.org/),
-i.e., it uses the LazyVim plugin manager
+i.e., it uses the LazyVim plugin manager.
 
-However, I made some of my own changes to his profile:
+I started with that config, and then
+made some of my own changes to it:
 
+* I use other languages, so these LSPs were added:
+  -  VueJS, bash, awk, json
 * I don't want source code automatically reformatted, so:
   -  black, flake8, isort were explicitly commented out (in several places)
-* I use other languages, so these LSPs were added:
-  -  Vue, bash, awk, json
 
-Do something like this:
+Now, do something like this:
 ```
     cd lazyvim/
     git clone git@github.com:wendellwt/dev-environment-files.git
-    ce dev-environment-files
+    cd dev-environment-files
     cp -R nvim ~/.config/
 ```
 
@@ -175,6 +175,7 @@ If it all seems in place, start nvim and watch it install everything:
 
     :checkhealth
 ```
+Yipee!!!, right?
 
 ## NerdFont on windows
 
@@ -203,17 +204,18 @@ then, in PuTTY:
     FiraCode Nerd Font Mono
 ```
 However, take a look at these, they may be better:
+* [Martian](https://www.programmingfonts.org/#martian-mono)
 * [Meslo](https://www.programmingfonts.org/#meslo)
 * [SauceCodePro](https://www.programmingfonts.org/#source-code-pro)
 * [MonaSpace](https://www.programmingfonts.org/#monaspace-neon)
 
-## Keymaps to the above configuration
+## Keymaps used in the above configuration
 
-<> is <leader>, which is set to a space
+in the following, <> is <leader>, which is set to a space
 
 ```
 formatting
- <>mp function()
+  <>mp function()
 
 telescope
   <>ff <cmd>Telescope find_files  Fuzzy find files in cwd
