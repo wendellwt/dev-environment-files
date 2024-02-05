@@ -4,7 +4,7 @@ return {
   version = "*",
   opts = {
     options = {
-      mode = "tabs",
+      -- wt: mode = "tabs",
       separator_style = "slant",
     },
   },
